@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7bd33003.css",
-    "main.js": "/static/js/main.d467b4be.js",
+    "main.js": "/static/js/main.e3274ae7.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Travel.png": "/static/media/Travel.370e08bf1db312bf46e4.png",
     "static/media/flybuy.png": "/static/media/flybuy.a47d2d99b11a493fab9f.png",
@@ -11,11 +11,11 @@
     "static/media/imganiket.jpg": "/static/media/imganiket.05bbff550257a2ca221f.jpg",
     "index.html": "/index.html",
     "main.7bd33003.css.map": "/static/css/main.7bd33003.css.map",
-    "main.d467b4be.js.map": "/static/js/main.d467b4be.js.map",
+    "main.e3274ae7.js.map": "/static/js/main.e3274ae7.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bd33003.css",
-    "static/js/main.d467b4be.js"
+    "static/js/main.e3274ae7.js"
   ]
 }
