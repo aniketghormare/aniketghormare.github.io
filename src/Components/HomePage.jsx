@@ -41,7 +41,7 @@ import {
                 </Box>
                 <Link href={resume} download textAlign="left">
                   <Button
-                  id="resume-button-1"
+                  id="resume-button-2"
                     color="#3e2723"
                     bgColor="rgb(66,153,225)"
                     m={"10px"}
