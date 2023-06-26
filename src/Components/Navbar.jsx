@@ -1,154 +1,142 @@
+import style from "../Style/Navbar.module.css";
+import React from "react";
 import {
   Box,
+  Button,
   Flex,
+  Heading,
   HStack,
   IconButton,
-  Button,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  useColorMode,
+  Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
 } from "@chakra-ui/react";
-import resume from "./images/Aniket_Ghormare_Resume.pdf";
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import '../Components/Resume.css'
-import { NavLink } from 'react-router-dom';
-// import { SlDocs } from "react-icons/sl";
-import "./Navbar.css";
-import Name from "./Name";
-export default function Navbar() {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  // const onButtonClick = () => {
-  //   window.open(resume);
-  // };
+import { HamburgerIcon } from "@chakra-ui/icons";
+import resume from "../Docs/Aniket_Ghormare_Resume.pdf";
 
-  function downloadFile1() {
-    window.open(
-      "https://drive.google.com/file/d/13foJs_pga6A6vF-wAl1gQ8jLGi3Ud1gd/view?usp=sharing",
-      "_blank"
-    );
-    const link = document.createElement("a");
-    link.download = resume;
-    document.body.appendChild(link);
-    link.click();
-  }
-
+const Navbar = () => {
   return (
-    <div id="nav-menu">
-      <Box bg={useColorModeValue("white", "#1a202c")} px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={{ sm: "space-around", lg: "space-around" }}>
-          <IconButton
-            size={"md"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack
-            spacing={8}
-            alignItems={"center"}
-            fontSize={{ base: "lg", md: "lg", lg: "2x1" }}
-            fontWeight={"bold"}
-          >
-            <Box>
-              <Name />
-            </Box>
-            <HStack
-              as={"nav"}
-              spacing={10}
-              display={{ base: "none", md: "flex" }}
-            >
-              <Button className="nav-link home">
-                <a href="/">
-                  {" "}
-                  <b>Home</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link about">
-                <a href="/about">
-                  <b>About</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link skills">
-                <a href="/skills">
-                  {" "}
-                  <b>Skills</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link projects">
-                <a href="/projects">
-                  <b>Projects</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link contact">
-                <a href="/contact">
-                  <b>Contact</b>
-                </a>
-              </Button>
-            </HStack>
-          </HStack>
-          <Flex alignItems={"center"} columnGap={2}>
-            <Button
-              onClick={toggleColorMode}
-            >
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
-            <NavLink to="https://drive.google.com/file/d/13foJs_pga6A6vF-wAl1gQ8jLGi3Ud1gd/view?usp=sharing">
-              <button
-                id="resume-button-1"
-                className="nav-link resume"
-                onClick={downloadFile1}
-              >
-                {/* <SlDocs /> */}
-                RESUME
-              </button>
-            </NavLink>
-          </Flex>
-        </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-              <Button className="nav-link home">
-                <a href="/">
-                  {" "}
-                  <b>Home</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link about">
-                <a href="/about">
-                  <b>About</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link skills">
-                <a href="/skills">
-                  {" "}
-                  <b>Skills</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link projects">
-                <a href="/projects">
-                  <b>Projects</b>
-                </a>
-              </Button>
-
-              <Button className="nav-link contact">
-                <a href="/contact">
-                  <b>Contact</b>
-                </a>
-              </Button>
-            </Stack>
+    <div>
+      <Box id="nav-menu" className={style.navbar}>
+        <Flex justifyContent="space-between" alignContent="center">
+          <Box ml="20px">
+            <Heading>Aniket Ghormare</Heading>
           </Box>
-        ) : null}
+          <Box id={style.normal}>
+            <HStack gap="30px" fontSize="20px">
+              <Box>
+                <Link className="nav-link home" href="#home">
+                  Home
+                </Link>
+              </Box>
+              <Box>
+                <Link className="nav-link about" href="#about">
+                  About Me
+                </Link>
+              </Box>
+              <Box>
+                <Link className="nav-link skills" href="#skills">
+                  Skills
+                </Link>
+              </Box>
+              <Box>
+                <Link className="nav-link projects" href="#projects">
+                  Project
+                </Link>
+              </Box>
+              <Box>
+                <Link className="nav-link contact" href="#contact">
+                  Contact
+                </Link>
+              </Box>
+              <Box>
+                <Link className="nav-link resume" href={resume} download>
+                  <Button
+                    id="resume-button-1"
+                    color="#3e2723"
+                    bgColor="rgb(232,118,118)"
+                    onClick={() =>
+                      window.open(
+                        "https://drive.google.com/file/d/13foJs_pga6A6vF-wAl1gQ8jLGi3Ud1gd/view?usp=sharing"
+                      )
+                    }
+                  >
+                    Resume
+                  </Button>
+                </Link>
+              </Box>
+            </HStack>
+          </Box>
+          <Box id={style.hamburger}>
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                aria-label="Options"
+                icon={<HamburgerIcon color="#05386B" />}
+              />
+              <MenuList bgColor="#ff7043" textAlign="center" closeOnSelect>
+                <MenuItem
+                  bgColor="#ff7043"
+                  // className="nav-link home"
+                  color="#3e2723"
+                >
+                  <Link href="#home">Home</Link>
+                </MenuItem>
+                <MenuItem
+                  bgColor="#ff7043"
+                  // className="nav-link about"
+                  color="#3e2723"
+                >
+                  <Link href="#about">About Me</Link>
+                </MenuItem>
+                <MenuItem
+                  bgColor="#ff7043"
+                  // className="nav-link skills"
+                  color="#3e2723"
+                >
+                  <Link href="#skills">Skills</Link>
+                </MenuItem>
+                <MenuItem
+                  bgColor="#ff7043"
+                  // className="nav-link projects"
+                  color="#3e2723"
+                >
+                  <Link href="#projects">Project</Link>
+                </MenuItem>
+                <MenuItem
+                  bgColor="#ff7043"
+                  // className="nav-link contact"
+                  color="#3e2723"
+                >
+                  <Link href="#contact">Contact</Link>
+                </MenuItem>
+                <MenuItem bgColor="#ff7043">
+                  <Link href={resume} download>
+                    <Button
+                      // id="resume-button-1"
+                      color="#3e2723"
+                      bgColor="#ffe0b2"
+                      onClick={() =>
+                        window.open(
+                          "https://drive.google.com/file/d/13foJs_pga6A6vF-wAl1gQ8jLGi3Ud1gd/view?usp=sharing"
+                        )
+                      }
+                    >
+                      Resume
+                    </Button>
+                  </Link>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Flex>
       </Box>
+      <Box h="80px"></Box>
     </div>
   );
-}
+};
+
+export default Navbar;
