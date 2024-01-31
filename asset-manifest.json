@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.12cf9aab.js",
+    "main.css": "/static/css/main.67ec633e.css",
+    "main.js": "/static/js/main.5c079095.js",
     "static/js/787.2dcca737.chunk.js": "/static/js/787.2dcca737.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Travel.png": "/static/media/Travel.370e08bf1db312bf46e4.png",
+    "static/media/flybuy.png": "/static/media/flybuy.a47d2d99b11a493fab9f.png",
+    "static/media/Gamezy.png": "/static/media/Gamezy.c1af060b6588e0d6d92f.png",
+    "static/media/gadgetvault.png": "/static/media/gadgetvault.88b15a107e2c2a85f896.png",
+    "static/media/annu1.png": "/static/media/annu1.21f7d3247cdc25f5fb2a.png",
+    "static/media/Aniket_Ghormare_Resume.pdf": "/static/media/Aniket_Ghormare_Resume.e55061d070fd14a77acf.pdf",
+    "static/media/NextjsTodo.png": "/static/media/NextjsTodo.cfbcfdb731de7f65514a.png",
     "index.html": "/index.html",
-    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.12cf9aab.js.map": "/static/js/main.12cf9aab.js.map",
+    "main.67ec633e.css.map": "/static/css/main.67ec633e.css.map",
+    "main.5c079095.js.map": "/static/js/main.5c079095.js.map",
     "787.2dcca737.chunk.js.map": "/static/js/787.2dcca737.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.12cf9aab.js"
+    "static/css/main.67ec633e.css",
+    "static/js/main.5c079095.js"
   ]
 }
